@@ -2,6 +2,8 @@
 - 按周显示并选择日期
 
 # 效果
+- [Live Demo](https://littlegauze.github.io/weekly-date-picker/)
+
 ![效果图](http://7xlwka.com1.z0.glb.clouddn.com/weeklyDatePicker.png)
 
 # 使用
