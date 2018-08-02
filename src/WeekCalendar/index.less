@@ -1,0 +1,57 @@
+
+@padding-sm: 12px;
+@font-size-lg: 16px;
+@primary-color: #1890ff;
+@box-shadow-base: 0 2px 8px rgba(0, 0, 0, .15);
+@border-radius-sm: 2px;
+@border-radius-base: 4px;
+@border-color-base: hsv(0, 0, 85%);
+
+.container {
+  position: relative;
+  width: 100%;
+  :global {
+    .header {
+      height: 100px;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+
+      .item {
+        cursor: pointer;
+        padding-top: @padding-sm;
+        width: 200px;
+        text-align: center;
+        .week {
+          font-weight: bold;
+          font-size: @font-size-lg;
+        }
+        .calendar {
+          position: relative;
+          top: -5px;
+          font-size: 30px;
+        }
+        &.selected {
+          margin-top: -2px;
+          border: 2px solid @primary-color;
+          box-shadow: @box-shadow-base;
+          border-radius: @border-radius-sm;
+        }
+      }
+      .calendarPanel {
+        position: absolute;
+        right: 30px;
+        top: 85px;
+        width: 300px;
+        border: 1px solid @border-color-base;
+        border-radius: @border-radius-base;
+        box-shadow: @box-shadow-base;
+        background: #fff;
+        user-select: none;
+      }
+      .ant-radio-button-wrapper {
+        display: none;
+      }
+    }
+  }
+}
