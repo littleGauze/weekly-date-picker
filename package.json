@@ -2,7 +2,7 @@
   "name": "weekly-date-picker",
   "version": "1.0.0",
   "description": "antd weekly date picker component",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
@@ -19,16 +19,23 @@
   },
   "homepage": "https://github.com/littleGauze/weekly-date-picker#readme",
   "dependencies": {
+    "antd": "^3.7.3",
     "classnames": "^2.2.6",
-    "moment": "^2.22.2"
+    "koa": "^2.5.2",
+    "koa-static": "^5.0.0",
+    "moment": "^2.22.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-import": "^1.8.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "less": "^3.8.0",
     "less-loader": "^4.1.0",

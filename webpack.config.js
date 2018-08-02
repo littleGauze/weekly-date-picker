@@ -1,19 +1,16 @@
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = (env) => {
   return {
     mode: 'development',
     target: 'web',
     entry: {
-      index: './src/index.js',
-      // main: './index.js'
+      main: './index.js'
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: '[name].js',
-      sourceMapFilename: '[file].map',
-      library: 'WeeklyDatePicker',
-      libraryTarget: 'umd',
+      filename: '[name].js'
     },
     module: {
       rules: [
@@ -24,6 +21,28 @@ module.exports = (env) => {
         },
         {
           test: /\.less$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'style-loader'
+            },
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true
+              }
+            },
+            {
+              loader: 'less-loader',
+              options: {
+                  javascriptEnabled: true
+              }
+            }
+          ]
+        },
+        {
+          test: /\.less$/,
+          include: /node_modules/,
           use: [
             {
               loader: 'style-loader'
@@ -32,15 +51,22 @@ module.exports = (env) => {
               loader: 'css-loader'
             },
             {
-              loader: 'less-loader'
+              loader: 'less-loader',
+              options: {
+                  javascriptEnabled: true
+              }
             }
           ]
         }
       ]
     },
-    // externals: {
-    //   react: 'react',
-    //   antd: 'antd'
-    // }
+    plugins: [
+      new CopyWebpackPlugin([
+        {
+          from: 'public',
+          to: '.'
+        }
+      ])
+    ]
   }
 }
