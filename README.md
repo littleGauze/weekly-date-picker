@@ -14,7 +14,7 @@ import WeekCalendar from 'path-to-dir/WeekCalendar';
 ```
 
 ```js
-<WeekCalendar onDateChange={/* 回调函数（返回格式为'YYYY-MM-DD'的日期字符串） */} />
+<WeekCalendar date={/* 默认选中的日期 */} onDateChange={/* 回调函数（返回格式为'YYYY-MM-DD'的日期字符串） */} />
 ```
 
 # 依赖
