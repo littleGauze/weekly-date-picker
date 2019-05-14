@@ -4,7 +4,7 @@
 # 效果
 - [Live Demo](https://littlegauze.github.io/weekly-date-picker/)
 
-![效果图](http://7xlwka.com1.z0.glb.clouddn.com/weeklyDatePicker.png)
+![效果图](http://sources.gauze.life/weekly-picker-demo.png)
 
 # 使用
 - 直接将`src/WeekCalendar`组件拷贝到项目中使用。
